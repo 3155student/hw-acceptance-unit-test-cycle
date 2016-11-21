@@ -16,13 +16,13 @@ class MoviesController < ApplicationController
     
     if @movie.director.blank?
       
-       flash[:notice] = "'#{@movie.title}' doesn't have director info"
+       flash[:notice] = "'#{@movie.title}' has no director info"
        redirect_to movies_path
        
     else
       
-      @same_director_movies = Movie.where(director: @movie.director)
-      
+    @same_director_movies = Movie.where(director: @movie.director)
+    
     end
   end
 

@@ -14,12 +14,13 @@
 ActiveRecord::Schema.define(version: 20161110175540) do
 
   create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "rating"
+    t.string   "title",     limit: 255
+    t.string   "rating",    limit: 255
     t.text     "description"
     t.datetime "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string  "director"
   end
 
 end
